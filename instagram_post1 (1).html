@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram Post 1</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  gap: 20px;
+}
+.canvas {
+  width: 500px;
+  height: 500px;
+  background: #0d1b26;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.top-bar {
+  background: #E8722A;
+  padding: 22px 28px 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.big-num { font-size: 48px; font-weight: 900; color: #fff; line-height: 1; }
+.big-title { font-size: 15px; font-weight: 800; color: #fff; margin-top: 4px; line-height: 1.3; }
+.sub { font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 4px; }
+
+.content {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+.row-num {
+  width: 26px; height: 26px;
+  background: rgba(232,114,42,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; color: #E8722A; flex-shrink: 0;
+}
+.row-text { flex: 1; }
+.row-title { font-size: 12px; font-weight: 700; color: #e0ecf4; margin-bottom: 2px; }
+.row-sub { font-size: 10.5px; color: #5a7a8a; line-height: 1.3; }
+.tag {
+  font-size: 9.5px; font-weight: 700; color: #E8722A;
+  background: rgba(232,114,42,0.1);
+  padding: 3px 8px; border-radius: 8px; white-space: nowrap;
+}
+.footer {
+  background: rgba(232,114,42,0.08);
+  border-top: 1px solid rgba(232,114,42,0.15);
+  padding: 10px 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.footer-quote { font-size: 11px; color: #b8cdd8; font-style: italic; line-height: 1.5; margin-bottom: 5px; }
+.footer-cta { font-size: 12px; font-weight: 800; color: #E8722A; }
+.footer-link { font-size: 10px; color: #3d5565; margin-top: 2px; }
+
+.btn {
+  background: #E8722A; color: #fff; border: none;
+  padding: 14px 0; border-radius: 10px;
+  font-size: 16px; font-weight: 700;
+  cursor: pointer; width: 500px;
+}
+.btn:hover { opacity: 0.9; }
+.note { color: #555; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div class="canvas" id="post">
+  <div class="top-bar">
+    <div class="big-num">5</div>
+    <div class="big-title">Common Mistakes Parents Make<br>With Hyperactive Children</div>
+    <div class="sub">Are you doing any of these? 👇</div>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="row-num">1</div>
+      <div class="row-text">
+        <div class="row-title">Constant Yelling</div>
+        <div class="row-sub">Raises stress hormones — triggers defiance, not cooperation</div>
+      </div>
+      <div class="tag">❌ Backfires</div>
+    </div>
+    <div class="row">
+      <div class="row-num">2</div>
+      <div class="row-text">
+        <div class="row-title">Expecting Them to Sit Still</div>
+        <div class="row-sub">Their body NEEDS movement — forcing it makes things worse</div>
+      </div>
+      <div class="tag">❌ Biology</div>
+    </div>
+    <div class="row">
+      <div class="row-num">3</div>
+      <div class="row-text">
+        <div class="row-title">Comparing to Other Children</div>
+        <div class="row-sub">Destroys self-esteem and increases stubbornness</div>
+      </div>
+      <div class="tag">❌ Harmful</div>
+    </div>
+    <div class="row">
+      <div class="row-num">4</div>
+      <div class="row-text">
+        <div class="row-title">No Consistent Routine</div>
+        <div class="row-sub">Changing rules by mood = confused, unpredictable child</div>
+      </div>
+      <div class="tag">❌ Chaos</div>
+    </div>
+    <div class="row">
+      <div class="row-num">5</div>
+      <div class="row-text">
+        <div class="row-title">Using Screens to Calm Them</div>
+        <div class="row-sub">Overstimulates the brain — tantrums always follow</div>
+      </div>
+      <div class="tag">❌ Short fix</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-quote">"Your child isn't difficult — they just need the right approach 💙"</div>
+    <div class="footer-cta">🔗 Full Guide + 3 Free Bonuses — Link in Bio</div>
+    <div class="footer-link">digitorahub1.gumroad.com/l/bprcfk</div>
+  </div>
+</div>
+
+<button class="btn" onclick="download()">⬇️ تحميل الصورة PNG</button>
+<div class="note">سيتم حفظ صورة 1000×1000 جاهزة لإنستغرام</div>
+
+<script>
+function download() {
+  const btn = document.querySelector('.btn');
+  btn.textContent = '⏳ جاري التحميل...';
+  btn.disabled = true;
+  html2canvas(document.getElementById('post'), {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: '#0d1b26',
+    width: 500,
+    height: 500
+  }).then(canvas => {
+    const a = document.createElement('a');
+    a.download = 'instagram_post_1.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+    btn.textContent = '✅ تم التحميل بنجاح!';
+    setTimeout(() => { btn.textContent = '⬇️ تحميل الصورة PNG'; btn.disabled = false; }, 3000);
+  });
+}
+</script>
+</body>
+</html>
